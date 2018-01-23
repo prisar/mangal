@@ -6,7 +6,11 @@
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#button2').css('background-color', 'yellow');
+            if ($('#button2').length > 0) {
+                alert('Element found');
+            } else {
+                alert('Element not found');
+            }
         });
     </script>
 
