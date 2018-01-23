@@ -6,39 +6,22 @@
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('tr:even').css('background-color', 'gray');
-            $('tr:odd').css('background-color', 'yellow');
+            $('.small,span.big').css('border', '5px solid red');
         });
     </script>
-
 </head>
 <body>
-    <table id="table1" border="1">
-        <tr>
-            <td>C#</td>
-            <td>ASP.NET</td>
-            <td>SQL Server</td>
-        </tr>
-        <tr>
-            <td>ADO.NET</td>
-            <td>jQuery</td>
-            <td>Javascript</td>
-        </tr>
-        <tr>
-            <td>AJAX</td>
-            <td>CSS</td>
-            <td>HTML</td>
-        </tr>
-        <tr>
-            <td>VB</td>
-            <td>Dot.NET</td>
-            <td>Visual C++</td>
-        </tr>
-        <tr>
-            <td>Oracle</td>
-            <td>Java</td>
-            <td>J2EE</td>
-        </tr>
-    </table>
+    <span class="small">
+        Span 1
+    </span>
+    <br /><br />
+    <div class="small">
+        Div 1
+    </div>
+    <br /><br />
+    <span class="big">
+        Span 2
+    </span>
+    <p class="big">This is a paragraph</p>
 </body>
 </html>
