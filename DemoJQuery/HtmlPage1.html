@@ -3,20 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="Scripts/jquery-3.3.1.js"></script>
 </head>
 <body>
     <script type="text/javascript">
-        window.onload = function () {
-            if (document.addEventListener) {
-                document.getElementById('button1').addEventListener('click', clickHandler, false);
-            } else {
-                document.getElementById('button1').attachEvent('onclick', clickHandler);
-            }
-        };
-
-        function clickHandler() {
-            alert('jQuery Tutorial');
-        }
+        jQuery(document).ready(function () {
+            jQuery('#button1').click(function () {
+                alert('jQuery Tutorial');
+            });
+        });
     </script>
     <input type="button" id="button1" value="Click Me" />
 </body>
