@@ -7,9 +7,12 @@
 </head>
 <body>
     <script type="text/javascript">
-        //doesn't work since by the time this function is exceuted the DOM is not fully loaded. It can't find button1.
-        $('#button1').click(function () {
-            alert('jQuery Tutorial');
+        $(window).on("load", function () {
+            alert('window is loaded');
+        });
+
+        $(document).ready(function () {
+            alert('DOM Loaded');
         });
     </script>
     <input type="button" id="button1" value="Click Me" />
