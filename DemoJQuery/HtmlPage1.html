@@ -6,17 +6,38 @@
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            if ($('#button2').length > 0) {
-                alert('Element found');
-            } else {
-                alert('Element not found');
-            }
+            $('tr').css('background-color', 'gray');
         });
     </script>
 
 </head>
 <body>
-    <input type="button" id="button1" value="Click Me" />
-    <input type="button" id="button1" value="Click Me" />
+    <table id="table1" border="1">
+        <tr>
+            <td>C#</td>
+            <td>ASP.NET</td>
+            <td>SQL Server</td>
+        </tr>
+        <tr>
+            <td>ADO.NET</td>
+            <td>jQuery</td>
+            <td>Javascript</td>
+        </tr>
+        <tr>
+            <td>AJAX</td>
+            <td>CSS</td>
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>VB</td>
+            <td>Dot.NET</td>
+            <td>Visual C++</td>
+        </tr>
+        <tr>
+            <td>Oracle</td>
+            <td>Java</td>
+            <td>J2EE</td>
+        </tr>
+    </table>
 </body>
 </html>
