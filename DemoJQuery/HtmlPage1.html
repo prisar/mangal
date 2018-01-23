@@ -7,10 +7,9 @@
 </head>
 <body>
     <script type="text/javascript">
-        $(function () {
-            $('#button1').click(function () {
-                alert('jQuery Tutorial');
-            });
+        //doesn't work since by the time this function is exceuted the DOM is not fully loaded. It can't find button1.
+        $('#button1').click(function () {
+            alert('jQuery Tutorial');
         });
     </script>
     <input type="button" id="button1" value="Click Me" />
