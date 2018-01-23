@@ -4,17 +4,14 @@
     <meta charset="utf-8" />
     <title></title>
     <script src="Scripts/jquery-3.3.1.js"></script>
-</head>
-<body>
     <script type="text/javascript">
         $(window).on("load", function () {
-            alert('window is loaded');
-        });
-
-        $(document).ready(function () {
-            alert('DOM Loaded');
+            $('#div1').html("Height = " + $('#img1').height() + "<br />" + "Width = " + $('#img1').width());
         });
     </script>
-    <input type="button" id="button1" value="Click Me" />
+</head>
+<body>
+    <div id="div1"></div>
+    <img id="img1" src="Chrysanthemum.jpg" />
 </body>
 </html>
