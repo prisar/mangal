@@ -7,20 +7,27 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#btnSubmit').click(function () {
-                var result = $('input[type="radio"]:checked');
+                var result = $('input[type="checkbox"]:checked');
                 if (result.length > 0) {
-                    $('#divResult').html(result.val() + " is checked");
+                    var resultString = result.length + " checkboxes checked<br/>";
+
+                    result.each(function () {
+                        resultString += $(this).val() + "<br/>";
+                    });
+                    $('#divResult').html(resultString);
                 } else {
-                    $('#divResult').html("No radio button checked")
+                    $('#divResult').html("No checkbox checked")
                 }
             });
         });
     </script>
 </head>
 <body style="font-family:Arial">
-    Gender :
-    <input type="radio" name="gender" value="Male" />Male
-    <input type="radio" name="gender" value="Female" />Female
+    Skills:
+    <input type="checkbox" name="skills" value="JavaScript" />JavaScript
+    <input type="checkbox" name="skills" value="jQuery" />jQuery
+    <input type="checkbox" name="skills" value="C#" />C#
+    <input type="checkbox" name="skills" value="VB" />VB
     <br /><br />
     <input id="btnSubmit" type="submit" value="submit" />
     <br /><br />
