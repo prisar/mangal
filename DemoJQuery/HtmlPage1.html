@@ -6,36 +6,24 @@
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $(':input[type="text"]').each(function () {
-                alert($(this).val());
-            });
+            var result = $('input[type="radio"]:checked');
+            if (result.length > 0) {
+                $('#divResult').html(result.val() + " is checked");
+            } else {
+                $('#divResult').html("No radio button checked")
+            }
         });
     </script>
 </head>
 <body style="font-family:Arial">
-    First Name : <input type="text" value="John" />
-    <br /><br />
-    Last Name : <input type="text" value="Major" />
-    <br /><br />
-    Gender : 
+    Gender :
     <input type="radio" name="gender" checked="checked" value="Male" />Male
     <input type="radio" name="gender" value="Female" />Female
     <br /><br />
-    Skills:
-    <input type="checkbox" name="skills" checked="checked" value="JavaScript" />JavaScript
-    <input type="checkbox" name="skills" checked="checked" value="jQuery" />jQuery
+    <input id="btnSubmit" type="submit" value="submit" />
     <br /><br />
-    Country:
-          <select>
-              <option selected="selected" value="USA">USA</option>
-              <option value="India">India</option>
-              <option value="UK">UK</option>
-          </select>
-    <br /><br />
-    Summary : 
-    <br />
-    <textarea>I am a Senior Dot Net Developer with 10 years experience</textarea>
-    <br /><br />
-    <input type="submit" value="submit" />
+    <div id="divResult">
+
+    </div>
 </body>
 </html>
