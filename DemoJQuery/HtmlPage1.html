@@ -6,22 +6,19 @@
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.small,span.big').css('border', '5px solid red');
+            $('[title]').css('border', '5px solid red');
         });
     </script>
 </head>
 <body>
-    <div id="div1" class="small">
+    <div title="div1Title">
         DIV 1
     </div>
     <br />
-    <div id="div2">
+    <div title="div2Title">
         Div 2
     </div>
-    <span class="big">
-        Span
-    </span>
-    <p class="big">
+    <p title="pTitle">
         This is a paragraph.
     </p>
 </body>
