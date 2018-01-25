@@ -6,18 +6,20 @@
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var result = $('input[type="radio"]:checked');
-            if (result.length > 0) {
-                $('#divResult').html(result.val() + " is checked");
-            } else {
-                $('#divResult').html("No radio button checked")
-            }
+            $('#btnSubmit').click(function () {
+                var result = $('input[type="radio"]:checked');
+                if (result.length > 0) {
+                    $('#divResult').html(result.val() + " is checked");
+                } else {
+                    $('#divResult').html("No radio button checked")
+                }
+            });
         });
     </script>
 </head>
 <body style="font-family:Arial">
     Gender :
-    <input type="radio" name="gender" checked="checked" value="Male" />Male
+    <input type="radio" name="gender" value="Male" />Male
     <input type="radio" name="gender" value="Female" />Female
     <br /><br />
     <input id="btnSubmit" type="submit" value="submit" />
